@@ -48,3 +48,64 @@ aside {
         }
     }
 }
+
+@media (width <= 47.5em) {
+    #app {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto;
+        overflow-y: initial;
+    }  
+
+    main {
+        grid-row: 2;
+
+        & .main-container {
+            margin: 0 auto;
+        }
+    }
+
+    aside {
+        padding: 2rem;
+
+        & .aside-container {
+            grid-template-rows: auto 1fr;
+            margin-inline: auto;
+
+            & > img {
+                margin-top: 0.75rem;
+                
+            }
+        }
+
+        & header {
+            display: grid;
+            justify-content: center;
+            & h2, & p {
+                display: none;
+            } 
+        }  
+    }  
+    
+    & .flex {
+        flex-direction: column;
+    }
+
+}
+
+@media (width <= 31.3125em) {
+    .actions-wrapper {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+
+        & button {
+            display: block;
+            justify-content: center;
+        }
+
+        & button.btn-secondary {
+            max-width: 100%;
+            margin:0;
+        }
+    }
+}
