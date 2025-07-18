@@ -7,10 +7,6 @@
 
     main {
         grid-row: 2;
-
-        & .main-container {
-            margin: 0 auto;
-        }
     }
 
     aside {
